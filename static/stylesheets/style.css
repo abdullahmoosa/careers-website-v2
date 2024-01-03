@@ -1,15 +1,21 @@
 /* styles.css */
 
 body {
-    background-color: #282c35; /* Dark background color */
-    color: #ffffff; /* White text color */
+    background-color: #bbbcbf; /* Dark background color */
+    color: #000000; /* White text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1, h2 {
-    color: rgb(139, 93, 83); /* Light blue heading color */
+h1{
+    color :#371818;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(60, 51, 100); /* Light blue heading color */
 }
 
 .text-center {
@@ -22,17 +28,23 @@ section {
 
 img {
     width: 100%;
-    height: auto;
+    height: 460px;
 }
 
 button {
-    background-color: #b86a5f; /* Light blue button color */
-    color: #ffffff; /* White text color */
+    background-color: #24174b; /* Light blue button color */
+    color: #000000; 
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #371818; /* Darker blue on hover */
+    background-color: #4c2cae; /* Darker blue on hover */
+}
+
+#container {
+    max-width: 720px;
+    margin: 0 auto;
+
 }
