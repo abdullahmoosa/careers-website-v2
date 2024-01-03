@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1 class ="text-center mt-4">
-            nullToInfinity Careers
+            <i>nullToInfinity</i> Careers
         </h1>
         <div class="container">
 
@@ -32,12 +32,16 @@
             <p class="lead">Join us on this exciting adventure as we continue to push the boundaries of what's possible in the world of software development. Thank you for being part of the nullToInfinity story!</p>
         </section>
 
-        <section class="text-center">
-            <h2>Open Positions</h2>
-            <p>TODO -----</p>
+        <section>
+            <h2 class="text-center">Open Positions</h2>
+            <div>
+                {% for job in jobs %}
+                    {% include 'jobitem.html' %}
+                {% endfor %}
+            </div>
         </section>
 
-        <section class="text-center">
+        <section class="text-center mt-2">
             <button type="button" class="btn btn-primary">Contact us</button>
             <p>Copyright 2023, nullToInfinity</p>
         </section>
