@@ -21,7 +21,7 @@ def get_job(id):
 
     if job:
         print(f"Type of job is {type(job)}")
-        return jsonify(job)
+        return render_template('job.html',job = job)
     else:
         return jsonify({"error": f"Job with id = {id} not found"}), 404
 
