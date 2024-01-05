@@ -39,18 +39,13 @@
                 <h3>Requirements</h3>
                 <p>{{job.requirements}}</p>
             </div>
-            <!-- <div class="col-md-6"> -->
-                <!-- Add any additional content or images here -->
-            <!-- </div> -->
+
         </div>
-        
-        <section class="text-center mt-2">
-            <button type="button" class="btn btn-primary">
-                <a style="text-decoration: none; color: aliceblue;" href="mailto:abdullahmoosa128@gmail.com?subject=Apply%20for%20{{job.title}}&?body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AContact%20%3A%20%3Cyour%20contact%3E%0D%0A%0D%0AResume%20attached%20or%20details%20%3A%20%3C%3E%0D%0A">
-                    Apply Now
-                </a>
-            </button>
-        </section>
+
+        <div>
+            {% set job = job %}
+            {% include 'application_form.html' %}
+          </div>
 
         {% include 'footer.html' %}
     </div>
