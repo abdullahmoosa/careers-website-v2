@@ -28,7 +28,8 @@ def get_job(id):
 @app.route('/job/<id>/apply', methods = ['post'])
 def apply_to_job(id):
     data = request.form
-    return render_template('application_submitted.html',application = data)
+    job = load_job_from_db(id)
+    return render_template('application_submitted.html',application = data, job = job)
 
 if __name__ == '__main__':
     app.run(debug=True)
