@@ -44,7 +44,7 @@ def load_job_from_db(id):
 
         if specific_job:
             print(f"Information for Job with id = {id}")
-            job_data = {
+            job_data =  {
                 "id": specific_job.id,
                 "title": specific_job.title,
                 "location": specific_job.location,
@@ -52,7 +52,7 @@ def load_job_from_db(id):
                 "currency": specific_job.currency,
                 "responsibilities": specific_job.responsibilities,
                 "requirements": specific_job.requirements
-            }
+                        }
             return job_data
         else:
             print(f"Job with id = {id} not found")

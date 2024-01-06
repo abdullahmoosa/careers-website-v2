@@ -1,7 +1,7 @@
 # Module name must start with lowercase
 # To render a template, we can use the "render_template" function
 import json
-from flask import Flask, render_template, url_for,jsonify
+from flask import Flask, render_template, url_for,jsonify, request
 from database import load_jobs_from_db, load_job_from_db
 app = Flask(__name__)
 
@@ -21,9 +21,15 @@ def get_job(id):
 
     if job:
         print(f"Type of job is {type(job)}")
-        return jsonify(job)
+        return render_template('job_description.html',job = job)
     else:
         return jsonify({"error": f"Job with id = {id} not found"}), 404
+
+@app.route('/job/<id>/apply', methods = ['post'])
+def apply_to_job(id):
+    data = request.form
+    job = load_job_from_db(id)
+    return render_template('application_submitted.html',application = data, job = job)
 
 if __name__ == '__main__':
     app.run(debug=True)
